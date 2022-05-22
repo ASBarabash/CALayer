@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CAAnimationDelegate {
     
     var shapeLayer: CAShapeLayer! {
         didSet {
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
             overShapeLayer.lineWidth = 20 // толщина линии, которой будет совершаться обводка
             overShapeLayer.lineCap = .round // закругленные углы
             overShapeLayer.fillColor = nil // чтобы фигура не была замкнута
-            overShapeLayer.strokeEnd = 0.2 // конечная точка отрисовки (от 0 до 1)
+            overShapeLayer.strokeEnd = 0 // конечная точка отрисовки (от 0 до 1)
             let color = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).cgColor
             overShapeLayer.strokeColor = color // задаем цвет обводки
         }
@@ -93,11 +93,25 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tapped() {
-        overShapeLayer.strokeEnd += 0.2
-        if overShapeLayer.strokeEnd == 1 {
-            performSegue(withIdentifier: "showSecondScreen", sender: self)
-        }
+//        overShapeLayer.strokeEnd += 0.2
+//        if overShapeLayer.strokeEnd == 1 {
+//            performSegue(withIdentifier: "showSecondScreen", sender: self)
+//        }
+        let animation = CABasicAnimation(keyPath: "strokeEnd") // указываем свойство, которое хотим анимировать
+        animation.toValue = 1 // значение до которого хотим анимировать от 0 до 1
+        animation.duration = 2 // продолжительность анимации
+        
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut) // как проходит анимация
+        animation.fillMode = CAMediaTimingFillMode.both // чтобы анимация не удалялась сразу после завершения
+        animation.isRemovedOnCompletion = false // чтобы свойство сработало ( чтобы не удалялось по завершению )
+
+        animation.delegate = self // подписание под протокол
+        
+        overShapeLayer.add(animation, forKey: nil)
+        
     }
-    
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        performSegue(withIdentifier: "showSecondScreen", sender: self)
+    } // если подписаны под протокол CAAnimationDelegate то доступен метод
 }
 
