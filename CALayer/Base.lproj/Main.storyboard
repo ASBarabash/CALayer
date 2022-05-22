@@ -16,8 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prog" translatesAutoresizingMaskIntoConstraints="NO" id="z8e-C5-FmE">
+                                <rect key="frame" x="107" y="60" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="z8e-C5-FmE" secondAttribute="height" multiplier="1:1" id="4wT-uI-xwl"/>
+                                    <constraint firstAttribute="height" constant="200" id="CzX-yg-vqu"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbV-3F-M57">
-                                <rect key="frame" x="131" y="736" width="152" height="73"/>
+                                <rect key="frame" x="131" y="757" width="152" height="73"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YbV-3F-M57" secondAttribute="height" multiplier="152:73" id="cHj-zq-94u"/>
@@ -30,19 +37,12 @@
                                     <segue destination="rAk-go-g1x" kind="presentation" id="TAS-9o-Bdq"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prog" translatesAutoresizingMaskIntoConstraints="NO" id="z8e-C5-FmE">
-                                <rect key="frame" x="107" y="81" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="z8e-C5-FmE" secondAttribute="height" multiplier="1:1" id="4wT-uI-xwl"/>
-                                    <constraint firstAttribute="height" constant="200" id="CzX-yg-vqu"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="z8e-C5-FmE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="37" id="6iP-ty-tMk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YbV-3F-M57" secondAttribute="bottom" constant="53" id="Sha-Sc-ocr"/>
+                            <constraint firstItem="z8e-C5-FmE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="6iP-ty-tMk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YbV-3F-M57" secondAttribute="bottom" constant="32" id="Sha-Sc-ocr"/>
                             <constraint firstItem="z8e-C5-FmE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ga6-44-sk9"/>
                             <constraint firstItem="YbV-3F-M57" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rnd-p0-IOg"/>
                         </constraints>
@@ -65,14 +65,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cup" translatesAutoresizingMaskIntoConstraints="NO" id="rVE-FE-uOq">
-                                <rect key="frame" x="107" y="321" width="200" height="200"/>
+                                <rect key="frame" x="107" y="60" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="EP6-I0-bzP"/>
                                     <constraint firstAttribute="width" secondItem="rVE-FE-uOq" secondAttribute="height" multiplier="1:1" id="wL1-je-2gT"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJx-Hv-3CB">
-                                <rect key="frame" x="116.5" y="693" width="181" height="75"/>
+                                <rect key="frame" x="116.5" y="735" width="181" height="75"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cJx-Hv-3CB" secondAttribute="height" multiplier="181:75" id="AMG-B6-fJO"/>
@@ -86,10 +86,10 @@
                         <viewLayoutGuide key="safeArea" id="m5b-dm-mOf"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="m5b-dm-mOf" firstAttribute="bottom" secondItem="cJx-Hv-3CB" secondAttribute="bottom" constant="74" id="9gp-j3-3z2"/>
-                            <constraint firstItem="rVE-FE-uOq" firstAttribute="centerY" secondItem="Gfa-Cz-gl9" secondAttribute="centerY" id="Qaz-17-m88"/>
+                            <constraint firstItem="m5b-dm-mOf" firstAttribute="bottom" secondItem="cJx-Hv-3CB" secondAttribute="bottom" constant="32" id="9gp-j3-3z2"/>
                             <constraint firstItem="rVE-FE-uOq" firstAttribute="centerX" secondItem="Gfa-Cz-gl9" secondAttribute="centerX" id="QwL-o5-NpH"/>
                             <constraint firstItem="cJx-Hv-3CB" firstAttribute="centerX" secondItem="m5b-dm-mOf" secondAttribute="centerX" id="dQY-Ht-xVU"/>
+                            <constraint firstItem="rVE-FE-uOq" firstAttribute="top" secondItem="m5b-dm-mOf" secondAttribute="top" constant="16" id="ou0-Bm-fDN"/>
                         </constraints>
                     </view>
                     <connections>

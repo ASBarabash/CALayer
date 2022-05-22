@@ -8,6 +8,15 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    var gradienLayer: CAGradientLayer! {
+        didSet {
+            gradienLayer.startPoint = CGPoint(x: 1, y: 0)
+            gradienLayer.endPoint = CGPoint(x: 0, y: 1)
+            gradienLayer.colors = [UIColor.white.cgColor, UIColor.blue.cgColor]
+            gradienLayer.locations = [0.2, 0.8]
+        }
+    }
 
     @IBOutlet var imageView: UIImageView! {
         didSet {
@@ -25,9 +34,13 @@ class SecondViewController: UIViewController {
         }
     }
     
-    
+    override func viewDidLayoutSubviews() {
+        gradienLayer.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        gradienLayer = CAGradientLayer()
+        view.layer.insertSublayer(gradienLayer, at: 0)
         
     }
     
@@ -35,6 +48,5 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
         
     }
-    
 
 }
