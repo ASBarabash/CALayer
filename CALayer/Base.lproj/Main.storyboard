@@ -34,7 +34,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Tap me!"/>
                                 <connections>
-                                    <segue destination="rAk-go-g1x" kind="presentation" id="TAS-9o-Bdq"/>
+                                    <action selector="tapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="meX-DC-g07"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -50,6 +50,7 @@
                     <connections>
                         <outlet property="button" destination="YbV-3F-M57" id="9dc-KC-6Gf"/>
                         <outlet property="imageView" destination="z8e-C5-FmE" id="dCu-D2-p9K"/>
+                        <segue destination="rAk-go-g1x" kind="show" identifier="showSecondScreen" id="X05-Nz-Dor"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -92,6 +93,7 @@
                             <constraint firstItem="rVE-FE-uOq" firstAttribute="top" secondItem="m5b-dm-mOf" secondAttribute="top" constant="16" id="ou0-Bm-fDN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="CXB-NO-DC5"/>
                     <connections>
                         <outlet property="button" destination="cJx-Hv-3CB" id="BFa-bt-8eU"/>
                         <outlet property="imageView" destination="rVE-FE-uOq" id="LEP-Jb-zAo"/>
